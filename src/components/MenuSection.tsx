@@ -1,7 +1,5 @@
-'use client';
-
 import React, { useState, useMemo } from 'react';
-import Image from 'next/image';
+import Image from '@/components/Image';
 import { MENU_ITEMS } from '@/data/mockData';
 import { MenuItem, SpiceLevel } from '@/types';
 import { useCart } from '@/context/CartContext';

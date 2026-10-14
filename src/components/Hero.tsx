@@ -1,8 +1,6 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import Image from '@/components/Image';
 import { HERO_OPTIONS } from '@/data/mockData';
 import { Sparkles, Utensils, MapPin, ArrowRight, ShieldCheck, Heart, Moon, Flame } from 'lucide-react';
 
@@ -66,7 +64,7 @@ export default function Hero() {
             {/* Action CTAs in Light Blue & Amber */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
-                href="/menu"
+                to="/menu"
                 className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-wider text-white bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 hover:from-sky-400 hover:to-blue-500 shadow-lg shadow-sky-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <Utensils className="w-5 h-5 stroke-[2.5]" />
@@ -75,7 +73,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="/find-us"
+                to="/find-us"
                 className="inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl font-black text-sm uppercase tracking-wider text-sky-800 bg-white hover:bg-sky-50 border-2 border-sky-200 hover:border-sky-300 shadow-sm transition-all transform hover:-translate-y-0.5"
               >
                 <MapPin className="w-5 h-5 text-sky-600" />
@@ -83,7 +81,7 @@ export default function Hero() {
               </Link>
 
               <Link
-                href="/menu#pairings"
+                to="/menu#pairings"
                 className="inline-flex items-center gap-2 px-4 py-4 text-xs uppercase tracking-wider font-bold text-sky-700 hover:text-sky-900 transition-colors"
               >
                 <Sparkles className="w-4 h-4 text-amber-500" />

@@ -1,9 +1,6 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link, useLocation } from 'react-router-dom';
+import Image from '@/components/Image';
 import { useCart } from '@/context/CartContext';
 import { ShoppingBag, Menu as MenuIcon, X, MapPin, Sparkles, Phone, Clock } from 'lucide-react';
 
@@ -11,7 +8,8 @@ export default function Navbar() {
   const { totalItems, setIsCartOpen } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const location = useLocation();
+  const pathname = location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +69,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <div className="relative w-12 h-12 rounded-2xl overflow-hidden border-2 border-sky-300 bg-white p-0.5 shadow-md group-hover:scale-105 group-hover:shadow-sky-300/50 transition-all">
               <Image
                 src="/images/chill_mama_logo.png"
@@ -104,7 +102,7 @@ export default function Navbar() {
               return (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className={`text-xs uppercase tracking-wider px-4 py-2 rounded-xl font-bold transition-all ${
                     isActive
                       ? 'bg-sky-500 text-white shadow-sm font-black'
@@ -121,7 +119,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* Live Location Quick Link */}
             <Link
-              href="/find-us"
+              to="/find-us"
               className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-sky-700 bg-sky-50 hover:bg-sky-100 border border-sky-200 px-3.5 py-2 rounded-xl transition-all"
             >
               <MapPin className="w-3.5 h-3.5 text-sky-600" />
@@ -144,7 +142,7 @@ export default function Navbar() {
 
             {/* Order Online CTA */}
             <Link
-              href="/menu"
+              to="/menu"
               className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-xl font-black text-xs uppercase tracking-wider text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-200 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               Order Online
@@ -170,7 +168,7 @@ export default function Navbar() {
               return (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-4 py-3 text-sm font-bold rounded-xl transition-all ${
                     isActive
@@ -184,7 +182,7 @@ export default function Navbar() {
             })}
             <div className="pt-2">
               <Link
-                href="/menu"
+                to="/menu"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center block px-4 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider text-white bg-gradient-to-r from-sky-500 to-blue-600 shadow-md shadow-sky-200"
               >

@@ -1,17 +1,10 @@
 import React from 'react';
-import type { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import ChefsPairings from '@/components/ChefsPairings';
 import MenuSection from '@/components/MenuSection';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
-import { Sparkles, Utensils, Flame, ChevronRight, ShieldCheck, HeartHandshake } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Menu & Online Ordering | Chill Mama Fusion Indian Food Truck',
-  description:
-    'Order online from Chill Mama Food Truck. Freshly made Frankies, Tandoori Chicken Burgers, Indo-Chinese Gobi Bites, Bun Maska, and hot Cutting Chai in Morrisville & Cary, NC.',
-};
+import { Flame, ChevronRight } from 'lucide-react';
 
 export default function MenuPage() {
   return (
@@ -24,7 +17,7 @@ export default function MenuPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">
-              <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
+              <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
               <span className="text-sky-600">Menu & Ordering</span>
             </div>

@@ -1,17 +1,10 @@
 import React from 'react';
-import type { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import Image from '@/components/Image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ExperienceBlock from '@/components/ExperienceBlock';
-import { Sparkles, Heart, Flame, ShieldCheck, Award, ArrowRight, ChevronRight, Trees, Users, Utensils } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Our Story & Heritage | Chill Mama Fusion Indian Food Truck',
-  description:
-    'Discover the heart behind the spices. Chill Mama is a women-owned Indian fusion food truck bringing authentic dhaba culture and maternal warmth to Morrisville and Cary, NC.',
-};
+import { Heart, Flame, ArrowRight, ChevronRight, Utensils } from 'lucide-react';
 
 export default function OurStoryPage() {
   const storyGallery = [
@@ -47,7 +40,7 @@ export default function OurStoryPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">
-              <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
+              <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
               <span className="text-sky-600">Our Story & Heritage</span>
             </div>
@@ -135,7 +128,7 @@ export default function OurStoryPage() {
 
                 <div className="pt-4 flex items-center gap-4">
                   <Link
-                    href="/menu"
+                    to="/menu"
                     className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/20"
                   >
                     <Utensils className="w-4 h-4" />
@@ -143,7 +136,7 @@ export default function OurStoryPage() {
                   </Link>
 
                   <Link
-                    href="/catering"
+                    to="/catering"
                     className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider text-slate-700 bg-white hover:bg-slate-50 border-2 border-sky-200 shadow-sm"
                   >
                     <span>Book For Private Event</span>

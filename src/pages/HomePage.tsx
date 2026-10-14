@@ -1,13 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import Image from '@/components/Image';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ExperienceBlock from '@/components/ExperienceBlock';
 import ChefsPairings from '@/components/ChefsPairings';
 import TestimonialsSlider from '@/components/TestimonialsSlider';
 import Footer from '@/components/Footer';
-import { Sparkles, Utensils, MapPin, Calendar, ArrowRight, Flame, Heart, Award, ShieldCheck, Clock } from 'lucide-react';
+import { Flame, ArrowRight, Utensils, Heart, Calendar, MapPin } from 'lucide-react';
 
 export default function HomePage() {
   const previewHighlights = [
@@ -20,7 +20,7 @@ export default function HomePage() {
     },
     {
       title: 'Fusion Brioche Burgers',
-      badge: 'Mama\'s Craft',
+      badge: "Mama's Craft",
       image: '/images/dishes/chicken_burger.jpg',
       desc: 'Buttermilk fried tandoori chicken or crisp masala aloo tikki on toasted brioche with spicy makhani drizzle.',
       tag: 'Hand-Crafted Patties',
@@ -71,7 +71,7 @@ export default function HomePage() {
               </div>
 
               <Link
-                href="/menu"
+                to="/menu"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/20 transition-all self-start md:self-auto"
               >
                 <Utensils className="w-4 h-4" />
@@ -115,7 +115,7 @@ export default function HomePage() {
 
                     <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
                       <Link
-                        href="/menu"
+                        to="/menu"
                         className="text-xs font-black text-sky-600 hover:text-sky-800 flex items-center gap-1 group-hover:underline"
                       >
                         <span>Customize & Order</span>
@@ -173,7 +173,7 @@ export default function HomePage() {
 
                 <div className="pt-2 flex flex-wrap items-center gap-4">
                   <Link
-                    href="/our-story"
+                    to="/our-story"
                     className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/20"
                   >
                     <span>Read Our Full Story</span>
@@ -181,7 +181,7 @@ export default function HomePage() {
                   </Link>
 
                   <Link
-                    href="/catering"
+                    to="/catering"
                     className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider text-slate-700 bg-white hover:bg-slate-50 border-2 border-sky-200 shadow-sm"
                   >
                     <Calendar className="w-4 h-4 text-sky-600" />
@@ -212,14 +212,14 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                 <Link
-                  href="/find-us"
+                  to="/find-us"
                   className="px-7 py-4 rounded-xl font-black text-xs uppercase tracking-wider text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/20 flex items-center justify-center gap-2"
                 >
                   <MapPin className="w-4 h-4" />
                   <span>View Weekly Stops & GPS</span>
                 </Link>
                 <Link
-                  href="/menu"
+                  to="/menu"
                   className="px-7 py-4 rounded-xl font-black text-xs uppercase tracking-wider text-sky-800 bg-white hover:bg-sky-50 border-2 border-sky-200 shadow-sm flex items-center justify-center gap-2"
                 >
                   <Utensils className="w-4 h-4 text-sky-600" />

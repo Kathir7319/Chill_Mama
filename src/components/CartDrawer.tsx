@@ -1,7 +1,5 @@
-'use client';
-
 import React from 'react';
-import Image from 'next/image';
+import Image from '@/components/Image';
 import { useCart } from '@/context/CartContext';
 import { X, Trash2, Plus, Minus, ShoppingBag, Clock, ArrowRight, Sparkles } from 'lucide-react';
 

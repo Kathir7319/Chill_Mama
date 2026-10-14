@@ -1,7 +1,5 @@
-'use client';
-
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from '@/components/Image';
 import { CHEF_PAIRINGS } from '@/data/mockData';
 import { useCart } from '@/context/CartContext';
 import { ChefPairing } from '@/types';

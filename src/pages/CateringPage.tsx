@@ -1,16 +1,9 @@
 import React from 'react';
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CateringSection from '@/components/CateringSection';
-import { Sparkles, Calendar, ChevronRight, CheckCircle2, ShieldCheck, Truck, Users } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Catering & Food Truck Hire | Chill Mama Fusion Indian Food Truck',
-  description:
-    'Book the Chill Mama food truck for your wedding, corporate mixer, graduation, or backyard party in Morrisville, Cary, and Raleigh, NC. Packages starting at $18/guest.',
-};
+import { ChevronRight, CheckCircle2, Truck } from 'lucide-react';
 
 export default function CateringPage() {
   return (
@@ -23,7 +16,7 @@ export default function CateringPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">
-              <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
+              <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
               <span className="text-sky-600">Catering & Events</span>
             </div>

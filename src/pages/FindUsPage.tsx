@@ -1,16 +1,9 @@
 import React from 'react';
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FindUsSection from '@/components/FindUsSection';
-import { MapPin, Navigation, Clock, ChevronRight, Trees, Dog, Sparkles, Phone } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Find Us Tonight & Live Schedule | Chill Mama Fusion Indian Food Truck',
-  description:
-    'Track the Chill Mama food truck live in Morrisville, Cary, and the Research Triangle area. Check weekly operating hours, parking directions, and open patio seating.',
-};
+import { MapPin, ChevronRight, Trees, Dog, Sparkles, Phone } from 'lucide-react';
 
 export default function FindUsPage() {
   return (
@@ -23,7 +16,7 @@ export default function FindUsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             {/* Breadcrumb */}
             <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">
-              <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
+              <Link to="/" className="hover:text-sky-600 transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
               <span className="text-sky-600">Find Us & Live Schedule</span>
             </div>

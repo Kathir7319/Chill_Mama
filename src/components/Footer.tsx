@@ -1,8 +1,6 @@
-'use client';
-
 import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import Image from '@/components/Image';
 import { Mail, Sparkles, Heart, Check, Phone, MapPin } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -81,7 +79,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <div className="relative w-12 h-12 rounded-2xl overflow-hidden border-2 border-sky-300 bg-white p-0.5 shadow-md">
                 <Image
                   src="/images/chill_mama_logo.png"
@@ -119,22 +117,22 @@ export default function Footer() {
             <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest">Quick Navigation</h4>
             <ul className="space-y-2 text-xs text-slate-600 font-medium">
               <li>
-                <Link href="/" className="hover:text-sky-600 transition-colors">Home Page</Link>
+                <Link to="/" className="hover:text-sky-600 transition-colors">Home Page</Link>
               </li>
               <li>
-                <Link href="/menu" className="hover:text-sky-600 transition-colors">Full Food Truck Menu</Link>
+                <Link to="/menu" className="hover:text-sky-600 transition-colors">Full Food Truck Menu</Link>
               </li>
               <li>
-                <Link href="/menu#pairings" className="hover:text-sky-600 transition-colors">Chef&apos;s Pairings</Link>
+                <Link to="/menu#pairings" className="hover:text-sky-600 transition-colors">Chef&apos;s Pairings</Link>
               </li>
               <li>
-                <Link href="/our-story" className="hover:text-sky-600 transition-colors">Our Story & Heritage</Link>
+                <Link to="/our-story" className="hover:text-sky-600 transition-colors">Our Story & Heritage</Link>
               </li>
               <li>
-                <Link href="/catering" className="hover:text-sky-600 transition-colors">Catering & Food Truck Hire</Link>
+                <Link to="/catering" className="hover:text-sky-600 transition-colors">Catering & Food Truck Hire</Link>
               </li>
               <li>
-                <Link href="/find-us" className="hover:text-sky-600 transition-colors">Find Us Tonight (Live Schedule)</Link>
+                <Link to="/find-us" className="hover:text-sky-600 transition-colors">Find Us Tonight (Live Schedule)</Link>
               </li>
             </ul>
           </div>
@@ -177,19 +175,19 @@ export default function Footer() {
             <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest">Information</h4>
             <ul className="space-y-2 text-xs text-slate-600 font-medium">
               <li>
-                <Link href="/" className="hover:text-sky-600 transition-colors">Privacy Policy</Link>
+                <Link to="/" className="hover:text-sky-600 transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/" className="hover:text-sky-600 transition-colors">Terms of Service</Link>
+                <Link to="/" className="hover:text-sky-600 transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <Link href="/catering" className="hover:text-sky-600 transition-colors">Work With Us</Link>
+                <Link to="/catering" className="hover:text-sky-600 transition-colors">Work With Us</Link>
               </li>
               <li>
                 <a href="mailto:mama@chillmamafoodtruck.com" className="hover:text-sky-600 transition-colors">Contact Support</a>
               </li>
               <li>
-                <Link href="/menu#pairings" className="hover:text-sky-600 transition-colors">Allergen Guide</Link>
+                <Link to="/menu#pairings" className="hover:text-sky-600 transition-colors">Allergen Guide</Link>
               </li>
             </ul>
           </div>
