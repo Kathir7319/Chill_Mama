@@ -7,49 +7,49 @@ export default function ExperienceBlock() {
     switch (id) {
       case 'heritage':
         return {
-          icon: <Sparkles className="w-7 h-7 text-sky-600" />,
-          bgIcon: 'bg-sky-50 border-sky-200',
-          badge: 'bg-sky-100 text-sky-700',
+          icon: <Sparkles className="w-7 h-7 text-[#FF8A24]" />,
+          bgIcon: 'bg-[#FF8A24]/15 border-[#FF8A24]/30',
+          badge: 'bg-[#FF8A24]/15 text-[#FF8A24] border border-[#FF8A24]/30',
         };
       case 'hangout':
         return {
-          icon: <Trees className="w-7 h-7 text-emerald-600" />,
-          bgIcon: 'bg-emerald-50 border-emerald-200',
-          badge: 'bg-emerald-100 text-emerald-700',
+          icon: <Trees className="w-7 h-7 text-[#3D6B45]" />,
+          bgIcon: 'bg-[#3D6B45]/15 border-[#3D6B45]/30',
+          badge: 'bg-[#3D6B45]/15 text-[#3D6B45] border border-[#3D6B45]/30',
         };
       case 'inclusive':
         return {
-          icon: <HeartHandshake className="w-7 h-7 text-blue-600" />,
-          bgIcon: 'bg-blue-50 border-blue-200',
-          badge: 'bg-blue-100 text-blue-700',
+          icon: <HeartHandshake className="w-7 h-7 text-[#E94B20]" />,
+          bgIcon: 'bg-[#E94B20]/15 border-[#E94B20]/30',
+          badge: 'bg-[#E94B20]/15 text-[#E94B20] border border-[#E94B20]/30',
         };
       default:
         return {
-          icon: <Flame className="w-7 h-7 text-amber-600" />,
-          bgIcon: 'bg-amber-50 border-amber-200',
-          badge: 'bg-amber-100 text-amber-700',
+          icon: <Flame className="w-7 h-7 text-[#FF8A24]" />,
+          bgIcon: 'bg-[#FF8A24]/15 border-[#FF8A24]/30',
+          badge: 'bg-[#FF8A24]/15 text-[#FF8A24] border border-[#FF8A24]/30',
         };
     }
   };
 
   return (
-    <section className="py-20 bg-slate-50/60 border-y border-sky-100 relative">
+    <section className="py-20 bg-[#171717] border-y border-[#333333] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs font-black uppercase tracking-wider mb-4 shadow-sm">
-            <Sparkles className="w-4 h-4 text-sky-600" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#242424] border border-[#333333] text-[#FF8A24] text-xs font-black uppercase tracking-wider mb-4 shadow-md">
+            <Sparkles className="w-4 h-4 text-[#FF8A24]" />
             The Food Truck Experience
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-black text-[#FFF2DC] tracking-tight">
             The Chill Mama Experience
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+          <p className="mt-4 text-base sm:text-lg text-[#D0CBC3] leading-relaxed font-normal">
             More than just street food on wheels—it’s an outdoor community gathering rooted in authentic spice craft and maternal hospitality.
           </p>
         </div>
 
-        {/* Three-Column Feature Block in Clean White Cards */}
+        {/* Three-Column Feature Block in Dark Grey #242424 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {EXPERIENCE_COLUMNS.map((col) => {
             const style = getCardStyle(col.id);
@@ -57,36 +57,36 @@ export default function ExperienceBlock() {
             return (
               <div
                 key={col.id}
-                className="group relative bg-white border-2 border-sky-100 hover:border-sky-300 rounded-3xl p-8 sm:p-9 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-sky-500/10 flex flex-col justify-between"
+                className="group relative bg-[#242424] border border-[#333333] hover:border-[#FF8A24] rounded-3xl p-8 sm:p-9 transition-all duration-300 hover:-translate-y-1.5 shadow-xl hover:shadow-[#E94B20]/10 flex flex-col justify-between"
               >
                 <div>
                   {/* Top Badge & Icon */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className={`w-14 h-14 rounded-2xl ${style.bgIcon} border flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform`}>
+                    <div className={`w-14 h-14 rounded-2xl ${style.bgIcon} border flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                       {style.icon}
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-slate-700">
+                    <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#171717] border border-[#333333] text-[#D0CBC3]">
                       {col.category}
                     </span>
                   </div>
 
                   {/* Header */}
-                  <h3 className="text-2xl font-black text-slate-900 mb-3 group-hover:text-sky-600 transition-colors">
+                  <h3 className="text-2xl font-black text-[#FFF2DC] mb-3 group-hover:text-[#FF8A24] transition-colors">
                     {col.title}
                   </h3>
 
                   {/* Body Text */}
-                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                  <p className="text-[#D0CBC3] text-sm sm:text-base leading-relaxed font-normal">
                     {col.body}
                   </p>
                 </div>
 
                 {/* Bottom Feature Pill */}
-                <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+                <div className="mt-8 pt-6 border-t border-[#333333] flex items-center justify-between text-xs font-bold">
                   <span className={`px-3 py-1 rounded-lg text-xs font-black ${style.badge}`}>
                     {col.badge}
                   </span>
-                  <span className="text-slate-400 group-hover:text-slate-600 transition-colors">
+                  <span className="text-[#D0CBC3]/60 group-hover:text-[#D0CBC3] transition-colors">
                     Morrisville & Cary, NC
                   </span>
                 </div>
@@ -95,19 +95,23 @@ export default function ExperienceBlock() {
           })}
         </div>
 
-        {/* Atmosphere Perks Ribbon */}
-        <div className="mt-12 p-6 rounded-3xl bg-white border-2 border-sky-200 shadow-sm flex flex-wrap items-center justify-around gap-6 text-sm text-slate-800 font-bold text-center">
-          <div className="flex items-center gap-2 text-sky-800">
-            <span className="text-xl">✨</span> Fairy String Light Canopy
+        {/* Atmosphere Perks Ribbon in Dark Grey #242424 */}
+        <div className="mt-12 p-6 rounded-3xl bg-[#242424] border border-[#333333] shadow-xl flex flex-wrap items-center justify-around gap-6 text-sm text-[#FFF2DC] font-bold text-center">
+          <div className="flex items-center gap-2 text-[#FFF2DC]">
+            <Trees className="w-5 h-5 text-[#3D6B45]" />
+            <span>Spacious Canopy Tree Shade</span>
           </div>
-          <div className="flex items-center gap-2 text-sky-800">
-            <Dog className="w-5 h-5 text-sky-600" /> Leashed Pets Warmly Welcomed
+          <div className="flex items-center gap-2 text-[#FFF2DC]">
+            <Dog className="w-5 h-5 text-[#FF8A24]" />
+            <span>100% Dog Friendly Patio</span>
           </div>
-          <div className="flex items-center gap-2 text-sky-800">
-            <ShieldCheck className="w-5 h-5 text-emerald-600" /> 100% Certified Zabiha Halal
+          <div className="flex items-center gap-2 text-[#FFF2DC]">
+            <ShieldCheck className="w-5 h-5 text-[#3D6B45]" />
+            <span>Strict Halal & Pure Veg Kitchen</span>
           </div>
-          <div className="flex items-center gap-2 text-sky-800">
-            <span className="text-xl">🌱</span> Dedicated Pure-Veg Fryer & Prep
+          <div className="flex items-center gap-2 text-[#FFF2DC]">
+            <Sparkles className="w-5 h-5 text-[#FF8A24]" />
+            <span>Evening Fairy String Lights</span>
           </div>
         </div>
       </div>

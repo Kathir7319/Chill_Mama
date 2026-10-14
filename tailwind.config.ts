@@ -8,28 +8,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+        // User's specified palette
+        charcoal: '#171717',     // Main background
+        darkgrey: '#242424',     // Cards and sections
+        chilli: {                // Primary CTA buttons
+          DEFAULT: '#E94B20',
+          hover: '#FF8A24',
         },
-        warmspice: {
-          light: '#fef3c7',
-          DEFAULT: '#f59e0b',
-          dark: '#d97706',
-        },
+        ember: '#FF8A24',        // Hover states / highlights
+        cream: '#FFF2DC',        // Main headings
+        softgrey: '#D0CBC3',     // Body text
+        herb: '#3D6B45',         // Fresh accent
+        // Utility border color for dark cards
+        borderdark: '#333333',
       },
       boxShadow: {
-        'sky': '0 10px 30px -5px rgba(14, 165, 233, 0.2)',
-        'soft': '0 4px 20px -2px rgba(15, 23, 42, 0.06)',
-        'card': '0 10px 25px -5px rgba(2, 132, 199, 0.08), 0 8px 10px -6px rgba(2, 132, 199, 0.04)',
+        'glow-chilli': '0 8px 30px -4px rgba(233, 75, 32, 0.35)',
+        'glow-ember': '0 8px 30px -4px rgba(255, 138, 36, 0.35)',
+        'card-dark': '0 10px 30px -5px rgba(0, 0, 0, 0.45)',
       },
     },
   },
